@@ -4,12 +4,16 @@ import Button from './Button'
 
 const Header = (props) => {
     const { title } = props
+    const { toggleform } = props
+    const { showAddform } = props
+    
+    
     return (
         <div className='container'>
             <h1 style={headerstyle}>
                 {title}
             </h1>
-          <Button value="Add Work"  />
+          <Button toggleform={toggleform} color={showAddform ? "green":"red"} value={showAddform ? "close":"open"}  />
           
         </div>
 

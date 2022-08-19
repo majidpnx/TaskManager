@@ -2,13 +2,12 @@ import React from 'react'
 
 const Button = (props) => {
     const {value}=props
+    const {toggleform}=props
     const {color}=props
-    const onClick =()=>{
-        console.log("clicked")
-    }
+    
     return (
        
-            <button onClick={onClick}>
+            <button onClick={toggleform} style={{backgroundColor: color }}>
                 {value}
             </button>
       
